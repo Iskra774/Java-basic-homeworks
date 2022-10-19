@@ -17,9 +17,8 @@ public class Ugadai {
             }
             else if(number < secondPlayerNumber){
                 System.out.println("No, number is lower");
-
-                howMuchWeGuess ++;
             }
+            howMuchWeGuess ++;
 
         }while (secondPlayerNumber != number);
         System.out.println("You win!!" + number + " " + "is" + howMuchWeGuess + " " + "trying");
