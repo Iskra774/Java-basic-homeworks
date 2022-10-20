@@ -15,6 +15,7 @@ public class Task21 {
     //Третий подьем: 98 + 50 - 1 = 147
     //Четвертый подьем: 147 + 50 - 1 = 196
     //Пятый подьем: выйти за пределы H.
+    //IEHFSIHFSIUFHSFHSFH
     public static void main(String[] args) {
         int counter = 0;
         int h = 200;
