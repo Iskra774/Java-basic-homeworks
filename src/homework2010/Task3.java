@@ -6,14 +6,13 @@ public class Task3 {
     public static void main(String[] args) {
         int h = 5;
         for(int i = 0; i < h;i++){
-            for(int j = 0; j < h; j++){
+            for(int j = h+1; j > 0; j--){
               System.out.print(" ");}
-
-            for(int j = 0; j < i*2; j++) {
+            for(int j = 0; j < i*2-1; j++) {
                 System.out.print("*");
             }
-            System.out.println("");
-        }
+            System.out.println("");}
+
 
     }
 }

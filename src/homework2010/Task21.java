@@ -18,11 +18,43 @@ public class Task21 {
     //в конце каждого месяца накопленный процент за месяц идет в тело вклада:
     //101 рубль во второй месяц, во второй месяц 12 процентов годовых от 101 рубля, во второй месяц от 102.01 в третий от 103.03
 
+    static void summBezKapital (double deposit, double percent, int termOfDep){
+        double summOfPerc = 0.0;
+        for(int i = 1; i <= termOfDep;i++) {
+            summOfPerc = summOfPerc + (deposit * percent / 100);
+        }
+        System.out.println("Summ of percent with no kapitalisation :" + " " + summOfPerc);
+        System.out.println("Body of deposit:" + " " + deposit);
+    }
+    static void summWithKapital(double deposit, double percent, int termOfDep){
+        double summOfPerc = 0.0;
+        for(int i = 1; i <= termOfDep;i++) {
+            summOfPerc = summOfPerc + (deposit * percent / 100);
+            deposit = deposit + (deposit*percent/100);
+            //System.out.println("Summ of percen for" + " " + i + " " + "year is:" + summOfPerc);
+        }
+        System.out.println("Summ of percent with yearly kapitalisation :" + " " + summOfPerc);
+    }
+    static void summWithKapitalForMonth(double deposit, double percent, int termOfDep){
+        double summOfPerc = 0.0;
+        termOfDep = termOfDep * 12;
+        for(int i = 1; i <= termOfDep;i++) {
+            summOfPerc = summOfPerc + (deposit * percent / 100/12);
+            deposit = deposit + (deposit*percent/100/12);
+            //System.out.println("Summ of percen for" + " " + i + " " + "year is:" + summOfPerc);
+        }
+        System.out.println("Summ of percent with monthly kapitalisation :" + " " + summOfPerc);
+
+    }
     public static void main(String[] args) {
-        int deposit = 100;
-        int percent = 5;
+        double deposit = 100.0;
+        double percent = 5.0;
         int termOfDep = 10;
         //1
-        
+        summBezKapital(deposit,percent,termOfDep);
+        summWithKapital(deposit, percent, termOfDep);
+        summWithKapitalForMonth(deposit, percent, termOfDep);
+
+
     }
 }
