@@ -7,6 +7,6 @@ public class doWhile {
             System.out.println(i);
             i++;
 
-        }while (i < 10);
+        }while (i < 15);
     }
 }

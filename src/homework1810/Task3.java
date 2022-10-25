@@ -7,7 +7,7 @@ public class Task3 {
     // трёхзначное натуральное число и его наибольшую цифру.
     public static void main(String[] args) {
         Random random = new Random();
-        int res = random.nextInt(1000);
+        int res = random.nextInt(900)+100;
         System.out.println(res);
         int max = 0;
         while (res > 0){
